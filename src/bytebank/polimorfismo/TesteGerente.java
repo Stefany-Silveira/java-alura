@@ -1,6 +1,6 @@
 package bytebank.polimorfismo;
 
-import bytebank.herdado.Gerente;
+import bytebank.polimorfismo.herdado.Gerente;
 
 public class TesteGerente {
     public static void main(String[] args) {

@@ -1,6 +1,6 @@
 package bytebank.polimorfismo;
 
-import bytebank.herdado.Funcionario;
+import bytebank.polimorfismo.herdado.Funcionario;
 
 public class TesteFuncionario {
     public static void main(String[] args) {

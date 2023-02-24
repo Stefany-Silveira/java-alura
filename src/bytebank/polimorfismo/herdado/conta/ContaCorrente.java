@@ -1,4 +1,4 @@
-package bytebank.herdado.conta;
+package bytebank.polimorfismo.herdado.conta;
 
 public class ContaCorrente extends Conta {
 

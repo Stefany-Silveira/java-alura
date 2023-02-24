@@ -1,4 +1,4 @@
-package bytebank.herdado;
+package bytebank.polimorfismo.herdado;
 
 public class Gerente extends Funcionario {
     private int senha;

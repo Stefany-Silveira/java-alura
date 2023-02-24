@@ -1,4 +1,4 @@
-package bytebank.herdado;
+package bytebank.polimorfismo.herdado;
 
 public class TesteGerente {
     public static void main(String[] args) {
