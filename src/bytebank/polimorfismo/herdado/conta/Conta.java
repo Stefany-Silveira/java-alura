@@ -1,5 +1,7 @@
 package bytebank.polimorfismo.herdado.conta;
 
+import java.time.temporal.ValueRange;
+
 public abstract class Conta {
     protected double saldo;
     private int agencia;
@@ -19,22 +21,17 @@ public abstract class Conta {
 
     public abstract void deposita(double valor);
 
-    public boolean saca(double valor) {
-        if (this.saldo >= valor) {
-            this.saldo -= valor;
-            return true;
-        } else {
-            return false;
+    public void saca(double valor) throws SaldoInsuficienteException {
+        if (this.saldo < valor) {
+
+            throw new SaldoInsuficienteException("Saldo: " + this.saldo + ", Valor: " + valor);
         }
+            this.saldo -= valor;
     }
 
-    public boolean transfere(double valor, Conta destino) {
-        if (this.saca(valor)) {
+    public void transfere(double valor, Conta destino) throws SaldoInsuficienteException {
+        this.saca(valor);
             destino.deposita(valor);
-            return true;
-        } else {
-            return false;
-        }
     }
 
     public double getSaldo() {
