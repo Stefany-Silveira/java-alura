@@ -22,8 +22,5 @@ public class FluxoComTratamento {
     private static void metodo2() {
         System.out.println("Ini do metodo2");
         throw new ArithmeticException("Deu erro");
-            //Conta conta = null;
-            //conta.deposita();
-        System.out.println("Fim do metodo2");
     }
 }
