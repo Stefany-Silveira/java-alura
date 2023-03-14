@@ -1,5 +1,11 @@
 package br.com.bytebank.polimorfismo.herdado.banco.conta.modelo;
 
+/**
+ * Classe que representa um cliente no ByteBank
+ *
+ * @author Stefany Silveira
+ * @version 0.1
+ */
 public abstract class Conta {
     protected double saldo;
     private int agencia;
@@ -7,7 +13,11 @@ public abstract class Conta {
     private Cliente titular;
     private static int total = 0;
 
-
+    /**
+     * Construtor para inicializar o objeto Conta a partir da agencia e numero
+     * @param agencia
+     * @param numero
+     */
     public Conta(int agencia, int numero) {
         if (agencia < 1) {
             throw new IllegalArgumentException("Agencia inválida");
@@ -26,6 +36,11 @@ public abstract class Conta {
 
     public abstract void deposita(double valor);
 
+    /**
+     * Valo precisa ser menor ou igual ao saldo
+     * @param valor
+     * @throws SaldoInsuficienteException
+     */
     public void saca(double valor) throws SaldoInsuficienteException {
         if (this.saldo < valor) {
 

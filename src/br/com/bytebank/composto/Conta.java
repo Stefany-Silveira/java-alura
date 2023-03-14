@@ -1,7 +1,6 @@
 package br.com.bytebank.composto;
 
 public class Conta {
-
     private double saldo;
     private int agencia;
     private int numero;
