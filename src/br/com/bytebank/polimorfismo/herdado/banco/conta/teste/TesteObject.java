@@ -3,7 +3,7 @@ package br.com.bytebank.polimorfismo.herdado.banco.conta.teste;
 import br.com.bytebank.polimorfismo.herdado.banco.conta.modelo.ContaCorrente;
 import br.com.bytebank.polimorfismo.herdado.banco.conta.modelo.ContaPoupanca;
 
-public class Teste {
+public class TesteObject {
     public static void main(String[] args) {
 
         Object cc = new ContaCorrente(22, 33);
