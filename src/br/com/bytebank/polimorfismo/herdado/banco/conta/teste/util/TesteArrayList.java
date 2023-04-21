@@ -6,7 +6,7 @@ import br.com.bytebank.polimorfismo.herdado.banco.conta.modelo.Conta;
 import br.com.bytebank.polimorfismo.herdado.banco.conta.modelo.ContaCorrente;
 
 
-public class Teste {
+public class TesteArrayList {
     public static void main(String[] args) {
 
         //Generics
