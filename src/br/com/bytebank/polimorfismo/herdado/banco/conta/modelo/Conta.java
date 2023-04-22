@@ -34,6 +34,10 @@ public abstract class Conta {
         //System.out.println("Estou criando uma conta " + this.numero);
     }
 
+    public Conta() {
+
+    }
+
     public abstract void deposita(double valor);
 
     /**
