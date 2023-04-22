@@ -13,7 +13,7 @@ public class Teste {
     public static void main(String[] args) {
 
         Conta cc1 = new ContaCorrente(22, 33);
-        Cliente clienteCC1 = new Cliente();
+        Cliente clienteCC1 =  new Cliente();
         clienteCC1.setNome("Nico");
         cc1.setTitular(clienteCC1);
         cc1.deposita(333.0);
@@ -46,9 +46,8 @@ public class Teste {
             System.out.println(conta);
         }
 
-        NumeroDaContaComparator comparator = new NumeroDaContaComparator();
-        TitularDaContaComparator titularDaContaComparator = new TitularDaContaComparator();
-        lista.sort(titularDaContaComparator);
+        NumeroDaContaComparator cmparator = new NumeroDaContaComparator();
+        lista.sort(new TitularDaContaComparator());
 
         System.out.println("---------");
 
