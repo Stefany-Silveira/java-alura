@@ -1,12 +1,14 @@
 package br.com.bytebank.polimorfismo.herdado.banco.conta.modelo;
 
+import java.util.Comparator;
+
 /**
  * Classe que representa um cliente no ByteBank
  *
  * @author Stefany Silveira
  * @version 0.1
  */
-public abstract class Conta {
+public abstract class Conta implements Comparable<Conta> {
     protected double saldo;
     private int agencia;
     private int numero;
@@ -56,6 +58,11 @@ public abstract class Conta {
     public void transfere(double valor, Conta destino) throws SaldoInsuficienteException {
         this.saca(valor);
             destino.deposita(valor);
+    }
+
+    @Override
+    public int compareTo(Conta outra) {
+        return Double.compare(this.saldo, outra.saldo);
     }
 
     public double getSaldo() {
