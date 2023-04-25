@@ -13,7 +13,7 @@
  
  * Java e java.lang: programe com a classe Object e String;
  * Java e java.util: Coleções, Wrappers e Lambda expressions;
- * Java e java.io: Streams, Reader e Writers;
+ * Java: trabalhando com listas e coleções de dados;
  * Java Collections: Dominando Listas, Sets e Mapas;
  
  ### 3º passo: Aprofundar em Java moderno e TDD
