@@ -1,4 +1,4 @@
-package sintaxe.basica;
+package br.com.sintaxe.basica;
 
 public class TestaWhile {
     public static void main(String[] args) {

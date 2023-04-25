@@ -1,4 +1,4 @@
-package pilha;
+package br.com.pilha;
 
 public class MinhaExcecao extends Exception { //checked
 

@@ -1,4 +1,4 @@
-package sintaxe.basica;
+package br.com.sintaxe.basica;
 
 public class TestaFor {
     public static void main(String[] args) {

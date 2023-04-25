@@ -1,4 +1,4 @@
-package pilha;
+package br.com.pilha;
 
 public class FluxoComError {
     public static void main(String[] args) {
