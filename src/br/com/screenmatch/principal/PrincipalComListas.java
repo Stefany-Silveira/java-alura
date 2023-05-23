@@ -6,6 +6,7 @@ import br.com.screenmatch.modelos.Titulo;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 
 public class PrincipalComListas {
     public static void main(String[] args) {
@@ -26,6 +27,8 @@ public class PrincipalComListas {
         lista.add(meuFilme);
         lista.add(outroFilme);
         lista.add(lost);
+        lista.sort(Comparator.comparing(Titulo::getAnoDeLancamento));
+        System.out.println("Ordenando por ano de lançamento: " + lista);
 
         for (Titulo item : lista) {
             System.out.println("Nome: " + item.getNome());
