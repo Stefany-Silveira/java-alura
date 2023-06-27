@@ -1,7 +1,10 @@
 package br.com.screenmatch.principal;
 
 import br.com.screenmatch.modelos.Titulo;
+import br.com.screenmatch.modelos.TituloOMDB;
+import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import java.io.IOException;
 import java.net.URI;
@@ -31,9 +34,24 @@ public class PrincipalComBusca {
         String json = response.body();
         System.out.println(json);
 
-        Gson gson = new Gson();
-        Titulo meuTitulo = gson.fromJson(json, Titulo.class);
-        System.out.println(meuTitulo);
+        Gson gson = new GsonBuilder()
+                .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
+                .create();
+
+        TituloOMDB meuTituloOMDB = gson.fromJson(json, TituloOMDB.class);
+        System.out.println(meuTituloOMDB);
+
+        try {
+            Titulo meuTitulo = new Titulo(meuTituloOMDB);
+            System.out.println("Título já convertido");
+            System.out.println(meuTitulo);
+        } catch (NumberFormatException e) {
+            System.out.println("Aconteceu um erro: Não foi possível converter o título");
+            System.out.println(e.getMessage());
+        }
+
+        System.out.println("O programa finalizou corretamente!");
+
     }
 
 }
