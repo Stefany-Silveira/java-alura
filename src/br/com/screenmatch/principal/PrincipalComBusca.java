@@ -7,6 +7,7 @@ import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -47,9 +48,15 @@ public class PrincipalComBusca {
                 Titulo meuTitulo = new Titulo(meuTituloOMDB);
                 System.out.println("Título já convertido");
                 System.out.println(meuTitulo);
+
+            FileWriter escrita = new FileWriter("filmes.txt");
+            escrita.write(meuTitulo.toString());
+            escrita.close();
+
             } catch (NumberFormatException e) {
                 System.out.println("Aconteceu um erro: Não foi possível converter o título");
                 System.out.println(e.getMessage());
+
             } catch (IllegalArgumentException e) {
                 System.out.println("Algum erro de argumento na busca, verifique o endereço");
             } catch (ErroDeConversaoDeAnoException e) {
